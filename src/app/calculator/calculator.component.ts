@@ -16,6 +16,14 @@ export class CalculatorComponent implements OnInit {
   numberTwo:string = '0';
   operator:string = '+'
   showResult() {
+    if (this.numberOne != '0' && this.operator == '/' && this.numberTwo == '0') {
+      if (+this.numberOne > 0) {
+        return 'Dương vô cùng';
+      }
+      else {
+        return 'Âm vô cùng';
+      }
+    }
     return eval(this.numberOne + this.operator + this.numberTwo);
   }
 }
