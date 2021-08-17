@@ -1,0 +1,7 @@
+<h1>Máy tính</h1>
+<input type="number" [(ngModel)]="numberOne">
+<select [(ngModel)]="operator">
+  <option *ngFor="let operator of operatorArray" [ngValue]="operator">{{operator}}</option>
+</select>
+<input type="number" [(ngModel)]="numberTwo">
+<h3>Kết quả: {{showResult()}}</h3>
